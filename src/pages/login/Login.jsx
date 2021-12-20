@@ -60,7 +60,7 @@ const Login = () => {
             <div className="LoginWrapper">
                 <div className="bgLayer"></div>
                 <div className="LoginBox">
-                    <h2>Login</h2>
+                    <h2>Login Admin</h2>
                     <Formik
                         initialValues={initialValues}
                         validationSchema={validationSchema}
