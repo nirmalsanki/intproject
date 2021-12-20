@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+body{font-family: 'Roboto', sans-serif; font-size: 1em; background:  #282C35;}
+
+.overlay { position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: rgba(0,0,0,0.8); z-index: 100; display: none;}
+.overlay.show {display: block;}
+.popup-content { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #ffffff;  width: 80%; max-width: 400px;}
+.popup-body{ padding: 15px;}
+.close-btn { position: absolute; height: 32px; width: 32px; border-radius: 50%; top: -10px; right:-10px;}
+
+.alert-success {color: #fff; background-color: #4cbb17; border-color: #4cbb17;}
+
+.btn-primary {background: #ee0290; border-color: #ee0290;}
+.btn-primary.disabled, .btn-primary:disabled {color: #fff; background-color: #ccc;  border-color: #ccc;}
+.form-control { outline:none !important; box-shadow: none!important;}
+a {color: #ee0290; text-decoration: none;}
+a:hover{color: #0b5ed7;}
