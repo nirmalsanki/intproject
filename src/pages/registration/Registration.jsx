@@ -66,9 +66,11 @@ const Registration = () => {
                 // toast.success('You have success fully registered. Please go to the login page.')
                 toastSuccess()
                 actions.resetForm()
+                actions.isSubmitting()
             },
             (err) => {
                 actions.setErrors(err)
+                actions.isSubmitting()
             }
         ));
 
@@ -110,7 +112,7 @@ const Registration = () => {
                         onSubmit={handleSubmitEvent}
 
                     >
-                        {({ values, errors, handleChange, touched, setFieldTouched, dirty }) => {
+                        {({ values, errors, handleChange, touched, setFieldTouched, dirty, isSubmitting }) => {
 
                             return (
                                 <FormikForm>
@@ -202,7 +204,7 @@ const Registration = () => {
                                                     variant="primary"
                                                     className="btn btnRed"
                                                     type="submit"
-                                                    disabled={!dirty}
+                                                    disabled={isSubmitting || !dirty}
                                                 >
                                                     Register Now
                                                 </Button>

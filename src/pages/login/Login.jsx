@@ -33,11 +33,12 @@ const Login = () => {
         dispatch(login(log_data,
             () => {
                 // alert('Success')
-
+                actions.setSubmitting(false)
             },
             (err) => {
                 //alert('Failed')
                 actions.setErrors(err)
+                actions.setSubmitting(false)
             }
 
         ))
